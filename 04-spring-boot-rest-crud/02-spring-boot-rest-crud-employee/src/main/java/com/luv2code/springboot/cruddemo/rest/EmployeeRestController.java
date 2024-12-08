@@ -49,9 +49,17 @@ public class EmployeeRestController {
 
         theEmployee.setId(0);
 
-        Employee dbEmploye = employeeService.save(theEmployee);
+        Employee dbEmployee = employeeService.save(theEmployee);
 
-        return theEmployee;
+        return dbEmployee;
+    }
+
+    @PutMapping("/employees")
+    public Employee updateEmployee (@RequestBody Employee theEmployee){
+
+        Employee dbEmployee = employeeService.save(theEmployee);
+
+        return dbEmployee;
     }
 
 }
