@@ -10,7 +10,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class DemoSecurityConfig {
 
     @Bean
-    public InMemoryUserDetailsManager userDetailsManager(){
+    public InMemoryUserDetailsManager userDetailsManager() {
 
         UserDetails john = User.builder()
                 .username("john")
