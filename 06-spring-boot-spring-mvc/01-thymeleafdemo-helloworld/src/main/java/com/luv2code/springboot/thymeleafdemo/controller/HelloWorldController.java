@@ -12,4 +12,11 @@ public class HelloWorldController {
     public String showForm(){
         return "helloworld-form";
     }
+
+    // need a controller method to process the initial HTML form
+
+    @RequestMapping("/processForm")
+    public String processForm(){
+        return "helloworld";
+    }
 }
