@@ -16,10 +16,10 @@ public class Customer {
     @Max(value = 10, message = "Must be less than or equal to 10")
     private Integer freePasses;
 
-    @Pattern(regexp = "^a-zA-Z0-9{5}", message = "only 5 chars/digits")
+    @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
     private String postalCode;
 
-    @CourseCode
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
     private String courseCode;
 
     public String getPostalCode() {

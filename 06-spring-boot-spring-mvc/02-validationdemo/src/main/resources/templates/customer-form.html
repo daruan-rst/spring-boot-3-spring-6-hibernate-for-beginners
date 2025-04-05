@@ -45,10 +45,10 @@
 
     <br><br>
 
-    Course Code: <input type="text" th:field="*{postalCode}" />
+    Course Code: <input type="text" th:field="*{courseCode}" />
 
     <span th:if="${#fields.hasErrors('courseCode')}"
-          th:errors="*{postalCode}"
+          th:errors="*{courseCode}"
           class="error"></span>
 
     <br><br>
