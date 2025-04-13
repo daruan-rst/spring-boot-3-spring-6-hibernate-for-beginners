@@ -33,5 +33,17 @@ public class EmployeeController {
         return "employees/list-employees";
     }
 
+    @GetMapping("/showFormForAdd")
+    public String showFormForAdd(Model theModel){
+
+        // Create the model atribute
+        Employee theEmployee = new Employee();
+
+        theModel.addAttribute("employee", theEmployee);
+
+        return "employees/employee-form";
+
+    }
+
 
 }
