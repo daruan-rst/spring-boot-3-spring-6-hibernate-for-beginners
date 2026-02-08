@@ -1,3 +1,14 @@
 spring:
+  main:
+    banner-mode: off # turn off the spring boot banner
   application:
     name: cruddemo
+  datasource:
+    url: jdbc:mysql://localhost:3306:/hb-01-one-to-one-uni
+    username: springstudent
+    password: springstudent
+
+# set logging level to warn
+logging:
+  level:
+    root: warn
