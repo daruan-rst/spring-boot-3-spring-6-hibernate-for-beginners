@@ -25,17 +25,24 @@ public class CruddemoApplication {
 
 	private void createInstructor(AppDAO appDAO) {
 
-		Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+//		Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+//
+//		InstructorDetail tempInstructorDetail = new InstructorDetail(
+//				"https://luv2code.com/youtube",
+//				"Luv 2 Code"
+//		);
+
+
+		Instructor tempInstructor = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
 
 		InstructorDetail tempInstructorDetail = new InstructorDetail(
 				"https://luv2code.com/youtube",
-				"Luv 2 Code"
+				"Guitar"
 		);
+		/*
+		  save the Instructor
 
-		/**
-		 * save the Instructor
-		 *
-		 * NOTE: this will ALSO save the details object because of CascadeType.ALL
+		  NOTE: this will ALSO save the details object because of CascadeType.ALL
 		 */
 
 		tempInstructor.setInstructorDetail(tempInstructorDetail);

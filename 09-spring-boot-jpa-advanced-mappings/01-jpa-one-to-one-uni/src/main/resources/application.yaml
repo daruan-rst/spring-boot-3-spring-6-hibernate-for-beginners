@@ -9,12 +9,12 @@ spring:
     password: springstudent
 
 # set logging level to warn
-logging:
-  level:
-    root: warn
-    org:
-      hibernate:
-        SQL: trace
-        orm:
-          jdbc:
-            bind: trace
+#logging:
+#  level:
+#    root: warn
+#    org:
+#      hibernate:
+#        SQL: trace
+#        orm:
+#          jdbc:
+#            bind: trace
