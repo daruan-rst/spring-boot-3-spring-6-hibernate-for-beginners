@@ -1,0 +1,20 @@
+spring:
+  main:
+    banner-mode: off # turn off the spring boot banner
+  application:
+    name: cruddemo
+  datasource:
+    url: jdbc:mysql://localhost:3306/hb-05-many-to-many
+    username: springstudent
+    password: springstudent
+
+# set logging level to warn
+logging:
+  level:
+    root: warn
+    org:
+      hibernate:
+        SQL: trace
+        orm:
+          jdbc:
+            bind: trace
