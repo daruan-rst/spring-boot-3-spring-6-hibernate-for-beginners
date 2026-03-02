@@ -1,6 +1,7 @@
 package com.luv2code.aopdemo;
 
-import com.luv2code.aopdemo.dao.AccouintDAO;
+import com.luv2code.aopdemo.dao.AccountDAO;
+import com.luv2code.aopdemo.dao.MembershipDAO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,22 +15,24 @@ public class AopdemoApplication {
 	}
 
 	@Bean
-	public CommandLineRunner commandLineRunner(AccouintDAO theAccountDao) {
+	public CommandLineRunner commandLineRunner(AccountDAO theAccountDao,
+											   MembershipDAO theMembershipDao) {
 
 		return runner -> {
 
-			demoTheBeforeAdvice(theAccountDao);
+			demoTheBeforeAdvice(theAccountDao, theMembershipDao);
 		};
 	}
 
-	private void demoTheBeforeAdvice(AccouintDAO theAccountDao) {
+	private void demoTheBeforeAdvice(AccountDAO theAccountDao, MembershipDAO theMembershipDao) {
 
 		// call the business method
 		theAccountDao.addAccount();
 
-		System.out.println("\n Let's call it again \n");
+		// call the membership business method
+		theMembershipDao.addAccount();
 
-		theAccountDao.addAccount();
+
 	}
 
 
