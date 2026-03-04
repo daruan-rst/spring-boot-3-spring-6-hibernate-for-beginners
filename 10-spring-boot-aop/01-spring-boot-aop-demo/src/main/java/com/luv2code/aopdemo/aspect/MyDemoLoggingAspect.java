@@ -12,7 +12,7 @@ public class MyDemoLoggingAspect {
 
     // lets start with an @Before advice
 
-    @Before("execution(public void add*())")
+    @Before("execution(* add*())")
 //    @Before("execution(public void updateAccount())")
     public void beforeAddAccount(){
 
