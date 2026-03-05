@@ -12,8 +12,7 @@ public class MyDemoLoggingAspect {
 
     // lets start with an @Before advice
 
-    @Before("execution(* add*())")
-//    @Before("execution(public void updateAccount())")
+    @Before("execution(* add*(com.luv2code.aopdemo.Account))")
     public void beforeAddAccount(){
 
         System.out.println("\n=====>>> Executing @Before advice on method: ");
