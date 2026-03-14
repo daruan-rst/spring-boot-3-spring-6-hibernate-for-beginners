@@ -7,4 +7,12 @@ public interface AccountDAO {
     void addAccount(Account account, boolean vipAccount);
 
     boolean doWork();
+
+    public String getName();
+
+    public void setName(String name);
+
+    public String getServiceCode();
+
+    public void setServiceCode(String serviceCode);
 }
