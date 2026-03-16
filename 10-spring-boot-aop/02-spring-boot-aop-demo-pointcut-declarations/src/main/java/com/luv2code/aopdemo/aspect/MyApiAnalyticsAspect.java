@@ -8,4 +8,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyApiAnalyticsAspect {
 
+    @Before("forDaoPackageNoGetterSetter()")
+    public void performApiAnalytics() {
+        System.out.println("\n=====>>> Performing API analytics");
+    }
+
 }
