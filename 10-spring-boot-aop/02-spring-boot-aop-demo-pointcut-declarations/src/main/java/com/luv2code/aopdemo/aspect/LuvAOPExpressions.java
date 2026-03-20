@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LuvAOPExpressions {
 
-    @Pointcut("execution(* com.luv2code.aopdemo.add.*.* (..))")
+    @Pointcut("execution(* com.luv2code.aopdemo.dao.*.* (..))")
     public void forDaoPackage(){}
 
     // create a pointcut for getter methods

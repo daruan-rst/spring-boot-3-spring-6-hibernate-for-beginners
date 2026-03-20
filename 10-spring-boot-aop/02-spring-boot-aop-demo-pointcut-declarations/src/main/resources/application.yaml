@@ -6,4 +6,7 @@ spring:
 
 logging:
   level:
+#    org:
+#      springframework:
+#        aop: DEBUG
     root: warn
