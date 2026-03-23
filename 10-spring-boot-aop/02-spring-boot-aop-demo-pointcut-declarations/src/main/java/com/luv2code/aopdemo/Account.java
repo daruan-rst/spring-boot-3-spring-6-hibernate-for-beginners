@@ -6,6 +6,8 @@ public class Account {
 
     private String email;
 
+    private String level;
+
     public String getName() {
         return name;
     }
@@ -20,5 +22,13 @@ public class Account {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }
