@@ -4,8 +4,6 @@ public class Account {
 
     private String name;
 
-    private String email;
-
     private String level;
 
     public String getName() {
@@ -16,19 +14,27 @@ public class Account {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getLevel() {
         return level;
     }
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public Account(String name, String level) {
+        this.name = name;
+        this.level = level;
+    }
+    public Account() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", level='" + level + '\'' +
+                '}';
     }
 }
