@@ -20,15 +20,24 @@ public class MyDemoLoggingAspect {
     {
 
         // print out method we are advising on
+        String method = theProcedingJoinPoint.getSignature().toShortString();
+        System.out.println("\n=====>>> Executing @Around (finally) on method: " + method);
 
         // get begin timestamp
+        long begin = System.currentTimeMillis();
 
         // now lets execute the method
+        Object result = theProcedingJoinPoint.proceed();
 
         // get end timestamp
+        long end = System.currentTimeMillis();
+
 
         // compute duration and display
-        return null;
+        long duration = end - begin;
+        System.out.println("\n=====>>> Duration: " + duration / 1000.0 + " seconds");
+
+        return result;
     }
 
     @After("execution(* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..))")
