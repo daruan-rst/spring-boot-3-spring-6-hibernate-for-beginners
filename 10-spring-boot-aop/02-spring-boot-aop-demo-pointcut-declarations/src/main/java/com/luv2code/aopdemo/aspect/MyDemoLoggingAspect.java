@@ -24,18 +24,31 @@ public class MyDemoLoggingAspect {
         System.out.println("\n=====>>> Executing @Around (finally) on method: " + method);
 
         // get begin timestamp
-        long begin = System.currentTimeMillis();
+//        long begin = System.currentTimeMillis();
+        long begin = System.nanoTime();
 
-        // now lets execute the method
-        Object result = theProcedingJoinPoint.proceed();
+        Object result = null;
+
+        try {
+            // now lets execute the method
+            result = theProcedingJoinPoint.proceed();
+        } catch (Exception e) {
+            // log the exception
+            System.out.println(e.getMessage());
+
+            // give user a custom message
+            result = "Major accident! But no worries, your private AOP helicopter is on the way!";
+
+        }
 
         // get end timestamp
-        long end = System.currentTimeMillis();
+//        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
 
 
         // compute duration and display
         long duration = end - begin;
-        System.out.println("\n=====>>> Duration: " + duration / 1000.0 + " seconds");
+        System.out.println("\n=====>>> Duration: " + duration + " nano seconds");
 
         return result;
     }
